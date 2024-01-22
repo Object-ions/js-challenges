@@ -12,6 +12,7 @@ function countOccurrences(string, charToCheck) {
 }
 */
 
+/*
 // Solution 2
 function countOccurrences(string, char) {
   let amount = 0;
@@ -23,5 +24,9 @@ function countOccurrences(string, char) {
   }
   return amount;
 }
+*/
+
+// Solution 3
+const countOccurrences = (string, char) => string.trim().split(char).length - 1;
 
 module.exports = countOccurrences;
