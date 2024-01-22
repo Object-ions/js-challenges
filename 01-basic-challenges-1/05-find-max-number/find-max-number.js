@@ -4,6 +4,8 @@ questions to ask -
 2. how to handle if an array is empty?
 */
 
+// Solution 1
+/*
 function findMaxNumber(numbersArr) {
   let largestNumber = numbersArr[0];
   for (let i = 0; i < numbersArr.length; i++) {
@@ -13,5 +15,9 @@ function findMaxNumber(numbersArr) {
   }
   return largestNumber;
 }
+*/
+
+// Solution 2
+const findMaxNumber = (numbersArr) => Math.max(...numbersArr);
 
 module.exports = findMaxNumber;
