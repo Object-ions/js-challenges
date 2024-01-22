@@ -27,6 +27,20 @@ function countOccurrences(string, char) {
 */
 
 // Solution 3
+/*
 const countOccurrences = (string, char) => string.trim().split(char).length - 1;
+*/
+
+// solution 4
+function countOccurrences(string, char) {
+  let amount = 0;
+  strArray = string.split('');
+  strArray.forEach((element) => {
+    if (element === char) {
+      amount++;
+    }
+  });
+  return amount;
+}
 
 module.exports = countOccurrences;
