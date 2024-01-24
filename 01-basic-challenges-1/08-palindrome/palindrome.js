@@ -4,6 +4,8 @@
 2. special chars? comma? period?
 */
 
+// Solution 1
+/*
 function isPalindrome(string) {
   // hello
   // result = [h,e,l,l,o]
@@ -15,6 +17,14 @@ function isPalindrome(string) {
   } else {
     return false;
   }
+}
+*/
+
+// Solution 2
+function isPalindrome(string) {
+  let sterilized = string.toLowerCase().replace(/[^a-z0-9]/g, '');
+  let reversedStrings = sterilized.split('').reverse().join('');
+  return sterilized === reversedStrings;
 }
 
 module.exports = isPalindrome;
