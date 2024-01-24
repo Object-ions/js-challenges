@@ -5,18 +5,12 @@ questions to ask:
 */
 
 function countVowels(str) {
-  let count = 0;
-  let vowels = ['a', 'e', 'o', 'i', 'u'];
-  // hello
-  // toCheck = [h,e,l,l,o]
-  let toCheck = str.trim().toLowerCase().split('');
-  toCheck.forEach((item) => {
-    if (vowels.includes(item)) {
-      count += 1;
-    }
-  });
-
-  return count;
+  const vowels = ['a', 'e', 'i', 'o', 'u'];
+  return str
+    .trim()
+    .toLowerCase()
+    .split('')
+    .filter((item) => vowels.includes(item)).length;
 }
 
 module.exports = countVowels;
