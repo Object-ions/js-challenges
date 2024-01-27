@@ -1,5 +1,5 @@
-// case sensitive? A vs. a
-
+// Solution 1
+/*
 const alphabet = [
   'a', // (1)
   'b', // (2)
@@ -52,6 +52,21 @@ function findMissingLetter(stringArr) {
   }
 
   return solution;
+}
+*/
+
+// Solution 2
+function findMissingLetter(arr) {
+  const alphabet = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
+  const startIndex = alphabet.indexOf(arr[0]);
+
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i] !== alphabet[startIndex + i]) {
+      return alphabet[startIndex + i];
+    }
+  }
+
+  console.log(startIndex);
 }
 
 module.exports = findMissingLetter;
