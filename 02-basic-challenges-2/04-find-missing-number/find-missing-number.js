@@ -8,6 +8,8 @@
 
 // [1,2,3,5] -> 4
 
+// Solution 1
+/*
 function findMissingNumber(numArr) {
   let missingNumber;
   let newArray = [];
@@ -24,6 +26,23 @@ function findMissingNumber(numArr) {
   });
 
   return missingNumber;
+}
+*/
+
+function findMissingNumber(numArr) {
+  if (numArr.length === 0) {
+    return 1;
+  }
+
+  const n = numArr.length + 1;
+  const expectedSum = (n * (n + 1)) / 2;
+
+  let actualSum = 0;
+  for (let i = 0; i < numArr.length; i++) {
+    actualSum += numArr[i];
+  }
+
+  return expectedSum - actualSum;
 }
 
 module.exports = findMissingNumber;
