@@ -31,24 +31,25 @@ const alphabet = [
 
 function findMissingLetter(stringArr) {
   let solution = '';
-  // stringArr = [a,b,c,e] -> d
-  let length = stringArr.length; // 4
-  const startingLetter = stringArr[0]; // a
-  console.log(startingLetter);
+  const length = stringArr.length;
+  const startingLetter = stringArr[0];
 
-  let startCut = alphabet.indexOf(startingLetter);
-  console.log(startCut);
+  const localAlphabet =
+    startingLetter === startingLetter.toUpperCase()
+      ? alphabet.map((letter) => letter.toUpperCase())
+      : alphabet;
 
-  let arrayPotion = alphabet.slice(startCut, startCut + length + 1); // [a,b,c,d,e]
+  let startCut = localAlphabet.indexOf(startingLetter);
+  let endCut = localAlphabet.indexOf(stringArr[length - 1]);
 
-  console.log(arrayPotion);
+  let arrayPortion = localAlphabet.slice(startCut, endCut + 1);
 
-  for (let item of arrayPotion) {
+  for (let item of arrayPortion) {
     if (!stringArr.includes(item)) {
       solution = item;
+      break;
     }
   }
-  console.log(solution);
 
   return solution;
 }
