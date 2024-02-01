@@ -1,28 +1,29 @@
 function rollDice() {
-  return Math.floor(Math.random() * 6) + 1;
+  return Math.floor(Math.random() * 6 + 1);
 }
 
-function diceGameSimulation(numSimulations) {
+function diceGameSimulation(userInput) {
   const results = [];
 
-  for (let i = 0; i < numSimulations; i++) {
+  for (let i = 0; i < userInput; i++) {
     const dice1 = rollDice();
     const dice2 = rollDice();
     const sum = dice1 + dice2;
 
-    let result = '';
+    let text = '';
     if (sum === 7 || sum === 11) {
-      result = 'win';
+      text = 'win';
     } else if (sum === 2 || sum === 3 || sum === 12) {
-      result = 'lose';
+      text = 'lose';
     } else {
-      result = 'roll again';
+      text = 'roll again';
     }
 
-    results.push({ dice1, dice2, sum, result });
+    results.push({ dice1: dice1, dice2: dice2, sum: sum, text: text });
   }
 
   return results;
+  // { dice1: dice1, dice2: dice2, sum: sum, result: result}
 }
 
 module.exports = diceGameSimulation;
