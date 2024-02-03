@@ -16,12 +16,23 @@ function formatPhoneNumber(numbersArr) {
 }
 */
 
+/*
 // Solution 2
 function formatPhoneNumber(numbersArr) {
   let areaCode = numbersArr.slice(0, 3).join('');
   let prefix = numbersArr.slice(3, 6).join('');
   let lineNumber = numbersArr.slice(6).join('');
   return `(${areaCode}) ${prefix}-${lineNumber}`;
+}
+*/
+
+// Solution 3
+function formatPhoneNumber(numbersArr) {
+  let formatted = numbersArr.join('');
+  return `(${formatted.substring(0, 3)}) ${formatted.substring(
+    3,
+    6
+  )}-${formatted.substring(6)}`;
 }
 
 module.exports = formatPhoneNumber;
