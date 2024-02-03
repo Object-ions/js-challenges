@@ -26,13 +26,21 @@ function formatPhoneNumber(numbersArr) {
 }
 */
 
+/*
 // Solution 3
 function formatPhoneNumber(numbersArr) {
   let formatted = numbersArr.join('');
   return `(${formatted.substring(0, 3)}) ${formatted.substring(
     3,
     6
-  )}-${formatted.substring(6)}`;
-}
+    )}-${formatted.substring(6)}`;
+  }
+*/
+
+// Solution 4
+const formatPhoneNumber = (numbersArr) =>
+  `(${numbersArr.slice(0, 3).join('')}) ${numbersArr
+    .slice(3, 6)
+    .join('')}-${numbersArr.slice(6).join('')}`;
 
 module.exports = formatPhoneNumber;
