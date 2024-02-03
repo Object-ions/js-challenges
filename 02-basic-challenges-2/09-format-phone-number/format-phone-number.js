@@ -7,12 +7,13 @@ function formatPhoneNumber(numbersArr) {
   resultArr.push(') ');
   resultArr.push(numbersArr.slice(3, 6));
   resultArr.push('-');
-  resultArr.push(numbersArr.slice(6, 9));
+  resultArr.push(numbersArr.slice(6, 10));
 
   console.log('result array: ', resultArr);
   let result = resultArr.join(',');
   let resultNoCommas = result.replace(/,/g, '');
   console.log('after join', resultNoCommas);
+  return resultNoCommas;
 }
 
 module.exports = formatPhoneNumber;
