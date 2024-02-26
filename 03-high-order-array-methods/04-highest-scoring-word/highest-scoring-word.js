@@ -1,3 +1,5 @@
+// Solution 1
+/*
 function highestScoringWord(str) {
   const words = str.split(' ');
 
@@ -18,6 +20,24 @@ function highestScoringWord(str) {
       highestIndex = i;
     }
   }
+  return words[highestIndex];
+}
+*/
+
+// Solution 2
+function highestScoringWord(str) {
+  const words = str.split(' ');
+
+  const scores = words.map((word) => {
+    return Array.from(word).reduce(
+      (acc, letter) => acc + letter.charCodeAt(0) - 96,
+      0
+    );
+  });
+
+  const highestScore = Math.max(...scores);
+  const highestIndex = scores.indexOf(highestScore);
+
   return words[highestIndex];
 }
 
