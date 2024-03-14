@@ -21,10 +21,19 @@ function isPalindrome(string) {
 */
 
 // Solution 2
+/*
 function isPalindrome(string) {
   let sterilized = string.toLowerCase().replace(/[^a-z0-9]/g, '');
   let reversedStrings = sterilized.split('').reverse().join('');
   return sterilized === reversedStrings;
+}
+*/
+
+function isPalindrome(string) {
+  // string = 'hello'
+  let stringReverse = string.split('').reverse().join('');
+  // stringReverse = 'olleh'
+  return string === stringReverse;
 }
 
 module.exports = isPalindrome;
