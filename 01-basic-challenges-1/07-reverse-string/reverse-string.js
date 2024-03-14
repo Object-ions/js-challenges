@@ -17,7 +17,7 @@ function reverseString(string) {
 function reverseString(string) {
   // Hello || str.length = 5
   let output = [];
-  for (let i = string.length + 1; i >= 0; i--) {
+  for (let i = string.length - 1; i >= 0; i--) {
     output.push(string[i])
   }
   return output.join('');
