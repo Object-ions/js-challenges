@@ -30,14 +30,14 @@ function titleCase(str) {
 
 function titleCase(str) {
   // str = 'hello world'
-  arrayOfWords = str.toLowercase().split(' ');
+  arrayOfWords = str.toLowerCase().split(' ');
   // arrayOfWords = ['hello', 'world'];
   let output = [];
   // Hello World
   arrayOfWords.forEach((word) => {
     output.push(word[0].toUpperCase() + word.slice(1))
   });
-  return output;
+  return output.join(' ');
 }
 
 module.exports = titleCase;
