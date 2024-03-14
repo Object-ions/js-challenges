@@ -31,9 +31,15 @@ function isPalindrome(string) {
 
 function isPalindrome(string) {
   // string = 'hello'
-  let stringReverse = string.split('').reverse().join('');
+  let cleanString = '';
+  for (let char of string) {
+    if ((char >= 'a' && char <= 'z') || (char >= 'A' && char <= 'Z') || (char >= '0' && char <= '9')) {
+      cleanString = cleanString + char.toLowerCase();
+    }
+  }
+  let stringReverse = cleanString.split('').reverse().join('');
   // stringReverse = 'olleh'
-  return string === stringReverse;
+  return cleanString === stringReverse;
 }
 
 module.exports = isPalindrome;
