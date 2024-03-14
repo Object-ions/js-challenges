@@ -16,14 +16,19 @@ function countVowels(str) {
 */
 
 function countVowels(string) {
-
-  // look at individual char in string
   // create var for vowels
+  const vowels = ['a', 'e', 'i', 'o', 'u', 'A', 'E', 'I', 'O', 'U'];
   // create var for vowel count
+  let numberOfVowels = 0;
+  // look at individual char in string
   // run a loop through each char in string and compare to vowels
-  // if there is a match, add +1 to vowel count
+  for (let char of string) {
+    // if there is a match, add +1 to vowel count
+    if (vowels.includes(char)) {
+      numberOfVowels ++;    
+    }
+  }
   // output vowelcount (number of vowels)
-
   return numberOfVowels;
 }
 
