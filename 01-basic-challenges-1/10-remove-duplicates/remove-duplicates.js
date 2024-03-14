@@ -27,10 +27,17 @@ function removeDuplicates(arr) {
 
 function removeDuplicates(array) {
   // create an empty array for the output
+  let output = [];
   // loop through each item in array
-  // check if the item !exists
-  // if the item !exist add it to the output array
+  for (let item of array) {
+    // check if the item !exists
+    if (!output.includes(item)) {
+      // if the item !exist add it to the output array
+      output.push(item);
+    }
+  };
   // return the output array
+  return output;
 }
 
 module.exports = removeDuplicates;
