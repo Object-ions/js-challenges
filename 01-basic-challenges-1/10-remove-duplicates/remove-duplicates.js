@@ -18,9 +18,19 @@ function removeDuplicates(arr) {
 */
 
 // Solution 2
+/*
 function removeDuplicates(arr) {
   let noDuplications = new Set(arr);
   return [...noDuplications]; // turn a set into an array with spread operator
+}
+*/
+
+function removeDuplicates(array) {
+  // create an empty array for the output
+  // loop through each item in array
+  // check if the item !exists
+  // if the item !exist add it to the output array
+  // return the output array
 }
 
 module.exports = removeDuplicates;
