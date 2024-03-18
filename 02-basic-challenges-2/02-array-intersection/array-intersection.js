@@ -55,7 +55,7 @@ function arrayIntersection(array1, array2) {
 
 function arrayIntersection(array1, array2) {
   // use filter on array2 to find only the items that exist in array 1
-  // convert a set to an array and return the output
+  return array2.filter((item) => array1.includes(item));
 }
 
 module.exports = arrayIntersection;
