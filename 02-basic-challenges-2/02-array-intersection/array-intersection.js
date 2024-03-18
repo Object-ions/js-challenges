@@ -36,6 +36,7 @@ function arrayIntersection(arrNumA, arrNumB) {
 }
 */
 
+/*
 function arrayIntersection(array1, array2) {
   // init array of results
   let result = [];
@@ -49,6 +50,12 @@ function arrayIntersection(array1, array2) {
   }
   //return the result
   return result;
+}
+*/
+
+function arrayIntersection(array1, array2) {
+  // use filter on array2 to find only the items that exist in array 1
+  // convert a set to an array and return the output
 }
 
 module.exports = arrayIntersection;
