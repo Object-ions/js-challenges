@@ -18,6 +18,19 @@ function findMaxNumber(numbersArr) {
 */
 
 // Solution 2
+/*
 const findMaxNumber = (numbersArr) => Math.max(...numbersArr);
+*/
 
+function findMaxNumber(numbersArr) {
+  // [1, 5, 2, 9]
+  let largestNumber = 0;
+
+  numbersArr.forEach(number => {
+    if (number === largestNumber || number > largestNumber) {
+      largestNumber = number;
+    }
+  });
+  return largestNumber;
+}
 module.exports = findMaxNumber;

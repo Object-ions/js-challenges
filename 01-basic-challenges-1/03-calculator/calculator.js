@@ -3,18 +3,20 @@ function calculator(num1, num2, operator) {
   switch (operator) {
     case '+':
       result = num1 + num2;
-      break;
+      break;  
     case '-':
       result = num1 - num2;
-      break;
-    case '/':
-      result = num1 / num2;
-      break;
+      break;  
     case '*':
       result = num1 * num2;
-      break;
+      break;  
+    case '/':
+      result = num1 / num2;
+      break;  
+
     default:
-      throw new Error('Invalid Operator') + operator;
+      throw new Error('Invalid p=operator')
+      break;
   }
   return result;
 }

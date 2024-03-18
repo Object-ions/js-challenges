@@ -16,16 +16,28 @@ function titleCase(str) {
 */
 
 // Solution 2
+// function titleCase(str) {
+//   words = str.toLowerCase().split(' ');
+//   // 'Hello world'
+//   // -> ['hello', 'world'];
+//   for (let i = 0; i < words.length; i++) {
+//     words[i] = words[i][0].toUpperCase() + words[i].slice(1);
+//     // -> ['Hello', 'World'];
+//   }
+//   return words.join(' ');
+//   // -> 'Hello World';
+// }
+
 function titleCase(str) {
-  words = str.toLowerCase().split(' ');
-  // 'Hello world'
-  // -> ['hello', 'world'];
-  for (let i = 0; i < words.length; i++) {
-    words[i] = words[i][0].toUpperCase() + words[i].slice(1);
-    // -> ['Hello', 'World'];
-  }
-  return words.join(' ');
-  // -> 'Hello World';
+  // str = 'hello world'
+  arrayOfWords = str.toLowerCase().split(' ');
+  // arrayOfWords = ['hello', 'world'];
+  let output = [];
+  // Hello World
+  arrayOfWords.forEach((word) => {
+    output.push(word[0].toUpperCase() + word.slice(1))
+  });
+  return output.join(' ');
 }
 
 module.exports = titleCase;
