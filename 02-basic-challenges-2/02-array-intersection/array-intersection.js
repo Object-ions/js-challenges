@@ -37,10 +37,18 @@ function arrayIntersection(arrNumA, arrNumB) {
 */
 
 function arrayIntersection(array1, array2) {
+  // init array of results
+  let result = [];
   // loop through array1
-  // check if the item of array1 exist in array2
-  // if it exists add item to the result array
+  for (let item of array1) {
+    // check if the item of array1 exist in array2
+    if (array2.includes(item)) {
+      // if it exists add item to the result array
+      result.push(item);
+    }
+  }
   //return the result
+  return result;
 }
 
 module.exports = arrayIntersection;
