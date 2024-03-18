@@ -22,6 +22,7 @@ function arrayIntersection(arrNumA, ArrNumB) {
 */
 
 // Solution 2
+/*
 function arrayIntersection(arrNumA, arrNumB) {
   const setA = new Set(arrNumA);
   const arrNumC = [];
@@ -32,6 +33,14 @@ function arrayIntersection(arrNumA, arrNumB) {
     }
   }
   return arrNumC;
+}
+*/
+
+function arrayIntersection(array1, array2) {
+  // loop through array1
+  // check if the item of array1 exist in array2
+  // if it exists add item to the result array
+  //return the result
 }
 
 module.exports = arrayIntersection;
