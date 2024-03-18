@@ -28,7 +28,7 @@ function findMissingNumber(numArr) {
   return missingNumber;
 }
 */
-
+/*
 function findMissingNumber(numArr) {
   if (numArr.length === 0) {
     return 1;
@@ -44,5 +44,14 @@ function findMissingNumber(numArr) {
 
   return expectedSum - actualSum;
 }
+*/
 
+function findMissingNumber(arrayOfNumbers) {
+  // create an empty array to hold the numbers (including the missing number by adding +1 to the array.length)
+  // create 'missingNumber'
+  // run a loop through all the indexes in the array
+  // compare the new array with the existing given array
+  // add the missing number into 'missingNumber' variable
+  // return the missing number
+}
 module.exports = findMissingNumber;
