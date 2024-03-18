@@ -48,10 +48,22 @@ function findMissingNumber(numArr) {
 
 function findMissingNumber(arrayOfNumbers) {
   // create an empty array to hold the numbers (including the missing number by adding +1 to the array.length)
+  let tempArray = [];
   // create 'missingNumber'
+  let missingNumber;
   // run a loop through all the indexes in the array
+  for (let i = 1; i <= arrayOfNumbers.length + 1; i++) {
+    tempArray.push(i);
+  }
   // compare the new array with the existing given array
-  // add the missing number into 'missingNumber' variable
+  for (let item of tempArray) {
+    if (!arrayOfNumbers.includes(item)) {
+      // add the missing number into 'missingNumber' variable
+      missingNumber = item;
+    }
+  }
+
   // return the missing number
+  return missingNumber;
 }
 module.exports = findMissingNumber;
