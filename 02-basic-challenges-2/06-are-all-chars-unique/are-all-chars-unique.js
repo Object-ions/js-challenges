@@ -14,6 +14,7 @@ function areAllCharactersUnique(string) {
 */
 
 // Solution 2
+/*
 function areAllCharactersUnique(string) {
   // 'a'b'c'd'e'
   const charMap = {};
@@ -28,6 +29,15 @@ function areAllCharactersUnique(string) {
     charMap[char] = true;
   }
   return true;
+}
+*/
+
+function areAllCharactersUnique(s) {
+  // create a character map
+  // iterate through s
+  // assign characters in the map
+  // if the value of any key is more than 1 return false
+  // else return true
 }
 
 module.exports = areAllCharactersUnique;
