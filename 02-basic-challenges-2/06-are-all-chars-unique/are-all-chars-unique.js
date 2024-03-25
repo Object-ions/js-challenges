@@ -34,9 +34,23 @@ function areAllCharactersUnique(string) {
 
 function areAllCharactersUnique(s) {
   // create a character map
+  let charMap = {};
+
   // iterate through s
-  // assign characters in the map
+  for (let char of s) {
+    // assign characters in the map
+    charMap[char] = (charMap[char] || 0) + 1;
+  }
+
   // if the value of any key is more than 1 return false
+  for (let char in charMap) {
+    if (charMap[char] > 1) {
+      // If any character count is more than 1, return false
+      return false;
+    }
+  }
+
+  return true;
   // else return true
 }
 
