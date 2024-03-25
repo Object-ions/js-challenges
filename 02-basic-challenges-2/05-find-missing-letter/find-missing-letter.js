@@ -74,23 +74,19 @@ function findMissingLetter(arr) {
   // [a,b,c,d,f]
 
   // iterate trough the array and compare to var alphabet
-  const alphabet = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMKOPQRSTUVWXYZ';
+  const alphabet = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
   const startPos = alphabet.indexOf(arr[0]); // 0
   const part = alphabet.slice(
     startPos /* 0 */,
     startPos + arr.length + 1 /* 6 */
   );
-  let result = '';
 
   // assert the missing letter into the var result
   for (let char of part) {
     if (!arr.includes(char)) {
-      result = char;
+      return char;
     }
   }
-
-  // return 'result'
-  return result;
 }
 
 module.exports = findMissingLetter;
