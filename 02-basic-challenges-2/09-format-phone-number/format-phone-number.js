@@ -45,10 +45,19 @@ const formatPhoneNumber = (numbersArr) =>
     .join('')}-${numbersArr.slice(6).join('')}`;
 */
 function formatPhoneNumber(arrOfNumbers) {
+  // arrOfNumbers = [9,2,5,1,2,3,1,3,5,6]
+
   // brake the array and group the first 3 indexes between params (index 0,1,2)
+  const areaCode = arrOfNumbers.slice(0, 3).join(''); // 925
+
   // group indexes 3,4,5 and add ' ' before and '-' after
-  // group the last 3 indexes (6,7,8)
+  const begNumber = arrOfNumbers.slice(3, 6).join(''); // 123
+
+  // group the last 3 indexes (6,7,8,9)
+  const endNumber = arrOfNumbers.slice(6).join(''); // 1356
+
   // return all 3 groups joined into a single string.
+  return `(${areaCode}) ${begNumber}-${endNumber}`;
 }
 
 module.exports = formatPhoneNumber;
