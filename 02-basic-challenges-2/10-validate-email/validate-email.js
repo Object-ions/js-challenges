@@ -4,7 +4,7 @@ function validateEmail(email) {
   return emailRegex.test(email);
 }
 */
-
+/*
 function validateEmail(email) {
   //  user@domain.com
   if (!email.includes('@')) {
@@ -24,6 +24,13 @@ function validateEmail(email) {
   }
 
   return true;
+}
+*/
+
+function validateEmail(str) {
+  return (
+    str[0] !== '@' && str[0] !== '.' && str.includes('@') && str.includes('.')
+  );
 }
 
 module.exports = validateEmail;
