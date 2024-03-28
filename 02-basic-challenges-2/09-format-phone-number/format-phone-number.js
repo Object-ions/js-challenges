@@ -38,9 +38,17 @@ function formatPhoneNumber(numbersArr) {
 */
 
 // Solution 4
+/*
 const formatPhoneNumber = (numbersArr) =>
   `(${numbersArr.slice(0, 3).join('')}) ${numbersArr
     .slice(3, 6)
     .join('')}-${numbersArr.slice(6).join('')}`;
+*/
+function formatPhoneNumber(arrOfNumbers) {
+  // brake the array and group the first 3 indexes between params (index 0,1,2)
+  // group indexes 3,4,5 and add ' ' before and '-' after
+  // group the last 3 indexes (6,7,8)
+  // return all 3 groups joined into a single string.
+}
 
 module.exports = formatPhoneNumber;
