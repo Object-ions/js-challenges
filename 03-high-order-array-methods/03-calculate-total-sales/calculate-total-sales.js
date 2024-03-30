@@ -1,3 +1,4 @@
+/*
 function calculateTotalSalesWithTax(products, taxRate) {
   const totalSales = products.reduce((sum, product) => {
     sum + product.price * product.quantity
@@ -7,6 +8,20 @@ function calculateTotalSalesWithTax(products, taxRate) {
 
   const totalSalesWithTax = taxAmount + totalSales
   return parseInt(totalSalesWithTax.toFixed(2));
+}
+*/
+
+const products = [
+  { name: 'Apple', price: 0.5, quantity: 10 },
+  { name: 'Banana', price: 0.3, quantity: 20 },
+  { name: 'Orange', price: 0.6, quantity: 15 },
+];
+
+function calculateTotalSalesWithTax(products, taxRate) {
+  // iterate over products array -  for every item
+  // calc totalSale - item.price * item.quantity
+  // calc total tax - taxRate * totalSale / 100
+  // return totalTax + totalSale
 }
 
 module.exports = calculateTotalSalesWithTax;
