@@ -11,8 +11,14 @@ function sumOfEvenSquares(numbers) {
 
 function sumOfEvenSquares(numbers) {
   // first we will filter the even numbers
-  // get each of them their squared result
-  // add them together
+  return (
+    numbers
+      .filter((number) => number % 2 === 0)
+      // get each of them their squared result
+      .map((number) => number ** 2)
+      // add them together
+      .reduce((acc, number) => acc + number, 0)
+  );
   // return that result
 }
 
