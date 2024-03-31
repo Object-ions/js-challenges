@@ -45,19 +45,45 @@ function highestScoringWord(str) {
 
 function highestScoringWord(str) {
   // create highestScore to store the score of the highest scoring word
+  let highestScore = 0;
+
   // create highestWord to store the highest scoring word
+  let highestWord = '';
+
   // create a charMap using a loop to assign scores to letters
   /*
     a: 1
     b: 2
     c: 3
   */
+
+  const letters = 'abcdefghijklmnopqrstuvwxyz';
+
+  const charMap = {};
+  for (let i = 0; i < letters.length; i++) {
+    charMap[letters[i]] = i + 1;
+  }
+
   // break str into an arrayOfWords
+  const arrayOfWords = str.split(' ');
+
   // for each word in the array calculate it's score
-  // if the score of the current word is greater than the highestScore
-  // update the highestScore with the new highest score
-  // update the highestWord with the new highest word
+  arrayOfWords.forEach((word) => {
+    let wordScore = 0;
+    for (let char of word) {
+      wordScore = wordScore + charMap[char];
+    }
+
+    // if the score of the current word is greater than the highestScore
+    if (wordScore >= highestScore) {
+      // update the highestScore with the new highest score
+      highestScore = wordScore;
+      // update the highestWord with the new highest word
+      highestWord = word;
+    }
+  });
   // return highestWord
+  return highestWord;
 }
 
 module.exports = highestScoringWord;
