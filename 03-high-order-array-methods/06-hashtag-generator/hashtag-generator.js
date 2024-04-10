@@ -30,10 +30,22 @@ function generateHashtag(str) {
 
 function generateHashtag(string) {
   // check validation if string is empty or > 140 chars return false
+  if (string.length > 140 || string === '') {
+    return false;
+  }
+
   // take string and break it into array of words
+  const arrayOfWords = string.split(' ');
+
   // convert every first char of each word to uppercase
+  const capWords = arrayOfWords.map(
+    (word) => word.charAt(0).toUpperCase() + word.slice(1)
+  );
   // add a hash tag to the array in the index of 0
+  capWords.unshift('#');
+
   // join all words into a single string
   // return result
+  return capWords.join('');
 }
 module.exports = generateHashtag;
