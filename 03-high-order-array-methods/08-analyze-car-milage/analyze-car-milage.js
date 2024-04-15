@@ -40,46 +40,22 @@ const cars = [
 
 function analyzeCarMileage(cars) {
   // 1. Calculate the average mileage of all cars.
-  function averageMiles(cars) {
-    const totalMiles =  cars.reduce((acc, car) => {
-      return acc + car.mileage;
-    }, 0);
-    return totalMiles / cars.length;
-  }
+    const totalMiles = (cars) => cars.reduce((acc, car) => acc + car.mileage, 0);
+    const averageMiles = totalMiles(cars) / cars.length;
 
   // 2. Find the car with the highest mileage.
-  function highestMileageCar(cars) {
-    return cars.reduce((acc, car) => {
-      if (car.mileage > acc.mileage) {
-        return car;
-      } else {
-        return acc
-      }
-    }, cars[0]);
-  }
+  const highestMileageCar = () => cars.reduce((acc, car) => (car.mileage > acc.mileage) ? car : acc, cars[0]);
 
   // 3. Find the car with the lowest mileage.
-  function lowestMileageCar(cars) {
-    return cars.reduce((acc, car) => {
-      if(car.mileage < acc.mileage) {
-        return car;
-      } else {
-        return acc;
-      }
-    }, cars[0]);
-  }
+  const lowestMileageCar = () => cars.reduce((acc, car) => (car.mileage < acc.mileage) ? car : acc, cars[0]);
 
   // 4. Calculate the total mileage of all cars combined.
-  function totalMileage(cars) {
-    return cars.reduce((acc, car) => {
-      return acc + car.mileage;
-    }, 0);
-  }
+  const totalMileage = () => cars.reduce((acc, car) =>  acc + car.mileage, 0);
 
   return {
-    averageMileage: parseFloat(averageMiles(cars).toFixed(2)),
-    highestMileageCar: highestMileageCar(cars),
-    lowestMileageCar: lowestMileageCar(cars),
+    averageMileage: parseFloat(averageMiles.toFixed(2)),
+    highestMileageCar: highestMileageCar(),
+    lowestMileageCar: lowestMileageCar(),
     totalMileage: totalMileage(cars),
   };
 }
