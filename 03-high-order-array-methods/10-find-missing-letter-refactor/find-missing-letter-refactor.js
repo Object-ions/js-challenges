@@ -19,6 +19,7 @@ function findMissingLetter(arr) {
   return missingCharCode? String.fromCharCode(missingCharCode - 1) : ''; 
 */
 
+/*
   function findMissingLetter(arr) {
     const missingCharCode = arr.filter((char, index) => {
       if (index === 0) return false;
@@ -28,6 +29,16 @@ function findMissingLetter(arr) {
       return currentCharCode - prevCharCode > 1;
     })[0]; 
   return missingCharCode ? String.fromCharCode(missingCharCode.charCodeAt(0) - 1) : ''; 
+}
+*/
+
+const alphabet = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
+
+function findMissingLetter(array) {
+  // find the first letter in the alphabet string
+  // create an array of expected letters using .map()
+  // find the first mis match between actual and expected letters
+  // return the missing letter
 }
 
 module.exports = findMissingLetter;
