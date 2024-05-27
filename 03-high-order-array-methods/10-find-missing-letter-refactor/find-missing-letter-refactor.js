@@ -36,9 +36,21 @@ const alphabet = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
 
 function findMissingLetter(array) {
   // find the first letter in the alphabet string
+  const startIndex = alphabet.indexOf(array[0]);
+  // startIndex = 19;
+
   // create an array of expected letters using .map()
+  const expectedLetters = array.map(
+    (char, index) => alphabet[startIndex + index]
+  );
+
   // find the first mis match between actual and expected letters
+  const missingLetter = expectedLetters.find(
+    (char, index) => char !== array[index]
+  );
+
   // return the missing letter
+  return missingLetter;
 }
 
 module.exports = findMissingLetter;
