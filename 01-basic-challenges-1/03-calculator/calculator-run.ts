@@ -1,4 +1,4 @@
-const calculator = require('./calculator');
+import { calculator } from './calculator';
 
 const result = calculator(1, 2, '+');
 
