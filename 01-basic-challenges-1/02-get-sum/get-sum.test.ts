@@ -1,4 +1,4 @@
-const getSum = require('./get-sum');
+import { getSum } from './get-sum';
 
 test('Calculating the sum of two numbers', () => {
   // Test case inputs
