@@ -1,4 +1,4 @@
-const calculator = require('./calculator');
+import { calculator } from './calculator';
 
 test('Performing arithmetic operations using the calculator function', () => {
   // Test case inputs
