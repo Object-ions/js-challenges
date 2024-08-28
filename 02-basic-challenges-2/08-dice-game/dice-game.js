@@ -92,15 +92,7 @@ const diceGameSimulation = (numSimulations) => {
     const dice1 = rollDice();
     const dice2 = rollDice();
     const sum = dice1 + dice2;
-    let result = '';
-
-    if (sum === 7 || sum === 11) {
-      result = 'win';
-    } else if (sum === 2 || sum === 3|| sum === 12) {
-      result = 'lose';
-    } else {
-      result = 'roll again';
-    }
+    const result = (sum === 7 || sum === 11) ? 'win' : (sum === 2 || sum === 3|| sum === 12) ? 'lose' : 'roll again';
 
     results.push( {
       result, 
@@ -109,6 +101,7 @@ const diceGameSimulation = (numSimulations) => {
       sum,
     });
   }
+  
   return results;
 }
 
